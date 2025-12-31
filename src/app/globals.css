@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Text selection color matching the theme */
+  ::selection {
+    background-color: #404040; /* neutral-700 */
+    color: #ffffff;
+  }
+}
+
+/* Animation Keyframes 
+   (Moved from component style tag for cleaner code)
+*/
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 180s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 180s linear infinite;
+}
+
+.animate-scroll-slow {
+  animation-duration: 60s; /* Overrides the 180s for VC ticker */
+}
+
+/* Twitter Widget Customization */
+.twitter-tweet {
+  margin: 0 !important;
+}
+
+blockquote.twitter-tweet {
+  background: #000 !important;
+  border: 1px solid #262626 !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5) !important;
+  color: #fff !important;
+}
+
+blockquote.twitter-tweet a {
+  color: #737373 !important; /* neutral-500 */
+}
