@@ -528,7 +528,6 @@ export default function CapviseGroup() {
                     <div className="w-full">
                       <div className="aspect-[16/10] bg-neutral-900 border border-white/5 rounded-3xl overflow-hidden relative group">
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-neutral-600">
-                          <Users className="w-16 h-16 mb-4 opacity-20" />
                         </div>
                         {/* Img tag for user to replace src */}
                         <img src="/panel.webp" className="w-full h-full object-cover" />
